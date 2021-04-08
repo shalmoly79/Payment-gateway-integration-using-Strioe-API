@@ -1,0 +1,31 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-3 mt-3 pt-5">
+        Donate For a Cause
+      </h1><p class="lead">Your contribution makes a difference
+      </p>
+      <form action="/charge" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{stripePublishableKey}}"
+           data-amount="15000"
+          data-name="Donate Plus"
+          data-description="Donation page"
+          data-image="/img/marketplace.png"
+          data-currency="inr"
+          data-locale="auto">
+        </script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-dark  btn-lg">Pay with Card</button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img src="/img/book1.png"  class="img-fluid img-thumbnail float-right" width=60% height=80% alt="">
+      
+    </div>
+  </div>
+</section>
